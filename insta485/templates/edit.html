@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>insta485</title>
+    </head>
+    <body>
+        <a href = "/">Home</a>
+        <a href = "/explore/">explore</a>
+        <a href = "/users/{{logname}}/">{{logname}}</a>
+        <p>{{logname}}</p>
+        <img src = "{{profile_pic}}" alt = "{{profile_pic}}">
+        <a href = "/accounts/password/">Change password</a>
+        <a href = "/accounts/delete/">Delete account</a>
+        <!-- DO NOT CHANGE THIS (aside from where we say 'FIXME') -->
+        <form action="/accounts/?target=/accounts/edit/" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*"/>
+            <input type="text" name="fullname" value="{{fullname}}" required/>
+            <input type="text" name="email" value="{{email}}>" required/>
+            <input type="submit" name="update" value="submit"/>
+            <input type="hidden" name="operation" value="edit_account"/>
+        </form>
+    </body>
+</html>
